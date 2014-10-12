@@ -1,0 +1,30 @@
+<form>
+
+    <fieldset>
+    <legend><span class="label round" >AD</span> هل تم السماح لك بالدخول إلى مكتب الإقتراع ؟  </legend>
+
+    <input type="radio" name="ad" value="1" id="S1" ng-model="ad"><label for="S1">نعم</label>
+    <input type="radio" name="ad" value="2" id="S2" ng-model="ad"><label for="S2">لا</label>
+  </fieldset>
+
+<fieldset class="sample-show-hide" ng-show="ad && C">
+
+    <legend>نص الرسالة</legend>
+
+
+
+
+    <div class="small-12 large-6 large-push-6 columns">
+        <label>انسخ هذا النص وأرسله في رسالة نصية
+          <input type="text" value={{"C"+C+"AD"+ad}} readonly>
+        </label>
+    </div>
+
+    <div class="small-12 large-6 large-pull-6 columns">
+      <label>أو إمسح هذه الصورة بهاتفك الجوال</label>
+      <qrcode data="{{'C'+C+'AD'+ad}}" size="150"></qrcode>
+    </div>
+
+  </fieldset>
+
+</form>

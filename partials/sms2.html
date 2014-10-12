@@ -1,0 +1,69 @@
+<form>
+
+  <fieldset>
+      <legend><span class="label round" >BD</span> </legend>
+      <input type="radio" name="bd" value="1" id="bd1" ng-model="bd"><label for="bd1">قبل 06:50</label>
+      <input type="radio" name="bd" value="2" id="bd2" ng-model="bd"><label for="bd2">بين 06:50 و 07:15</label>
+      <input type="radio" name="bd" value="3" id="bd3" ng-model="bd"><label for="bd3">بعد 07:15</label>
+  </fieldset>
+
+  <fieldset>
+      <legend><span class="label round" >BE</span> </legend>
+      <input type="text" pattern="\d*" maxlength="1" name="be" id="be" ng-model="be">
+
+  </fieldset>
+
+  <fieldset>
+      <legend><span class="label round" >BF</span> </legend>
+      <input type="text" pattern="\d*" maxlength="1" name="bf" id="bf" ng-model="bf" >
+
+  </fieldset>
+
+  <fieldset>
+      <legend><span class="label round" >BG</span> </legend>
+      <input type="radio" name="bg" value="1" id="bg1" ng-model="bg"><label for="bg1">نعم</label>
+      <input type="radio" name="bg" value="2" id="bg2" ng-model="bg"><label for="bg2">لا</label>
+  </fieldset>
+
+  <fieldset>
+      <legend><span class="label round" >BH</span> </legend>
+      <input type="text" pattern="\d*" maxlength="3" name="bh" id="bh" ng-model="bh" >
+  </fieldset>
+
+  <fieldset>
+      <legend><span class="label round" >BK</span> </legend>
+      <input type="text" pattern="\d*" maxlength="3" name="bk" id="bk" ng-model="bk">
+  </fieldset>
+
+  <fieldset>
+      <legend><span class="label round" >BM</span> </legend>
+      <input type="radio" name="bm" value="1" id="bm1" ng-model="bm"><label for="bm1">نعم</label>
+      <input type="radio" name="bm" value="2" id="bm2" ng-model="bm"><label for="bm2">لا</label>
+  </fieldset>
+
+  <fieldset>
+      <legend><span class="label round" >BN</span> </legend>
+      <input type="radio" name="bn" value="1" id="bn1" ng-model="bn"><label for="bn1">نعم</label>
+      <input type="radio" name="bn" value="2" id="bn2" ng-model="bn"><label for="bn2">لا</label>
+      <input type="radio" name="bn" value="3" id="bn3" ng-model="bn"><label for="bn3">لا</label>
+  </fieldset>
+
+
+<fieldset class="sample-show-hide" ng-show="bn">
+      <legend>نص الرسالة</legend>
+
+
+      <div class="small-12 large-6 large-push-6 columns">
+          <label>انسخ هذا النص وأرسله في رسالة نصية
+            <input type="text" value={{"C"+C+"BD"+bd+"BE"+be+"BF"+bf+"BG"+bg+"BH"+bh+"BK"+bk+"BM"+bm+"BN"+bn}} readonly>
+          </label>
+      </div>
+
+      <div class="small-12 large-6 large-pull-6 columns">
+        <label>أو إمسح هذه الصورة بهاتفك الجوال</label>
+        <qrcode data='{{"C"+C+"BD"+bd+"BE"+be+"BF"+bf+"BG"+bg+"BH"+bh+"BK"+bk+"BM"+bm+"BN"+bn}}' size="150"></qrcode>
+      </div>
+
+    </fieldset>
+
+</form>

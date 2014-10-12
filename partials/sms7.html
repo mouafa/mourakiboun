@@ -1,0 +1,47 @@
+<form>
+
+
+
+  <fieldset>
+      <legend><span class="label round" >GA</span> </legend>
+      <input type="text" pattern="\d*" maxlength="10" name="ga" id="ga" ng-model="ga">
+  </fieldset>
+
+  <fieldset>
+      <legend><span class="label round" >GB</span> </legend>
+      <input type="text" pattern="\d*" maxlength="3" name="gb" id="gb" ng-model="gb">
+  </fieldset>
+
+<fieldset>
+    <legend><span class="label round" >GC</span> </legend>
+    <input type="text" pattern="\d*" maxlength="3" name="gc" id="gc" ng-model="gc">
+</fieldset>
+
+<fieldset>
+    <legend><span class="label round" >GD</span> </legend>
+    <input type="text" pattern="\d*" maxlength="3" name="gd" id="gd" ng-model="gd">
+</fieldset>
+
+<fieldset>
+    <legend><span class="label round" >GE</span> </legend>
+    <input type="text" pattern="\d*" maxlength="3" name="ge" id="ge" ng-model="ge">
+</fieldset>
+
+
+<fieldset class="sample-show-hide" ng-show="ge">
+      <legend>نص الرسالة</legend>
+
+      <div class="small-12 large-6 large-push-6 columns">
+          <label>انسخ هذا النص وأرسله في رسالة نصية
+            <input type="text" value={{"C"+C+"GA"+ga+"GB"+gb+"GC"+gc+"GD"+gd+"GE"+ge}} readonly>
+          </label>
+      </div>
+
+      <div class="small-12 large-6 large-pull-6 columns">
+        <label>أو إمسح هذه الصورة بهاتفك الجوال</label>
+        <qrcode data="{{"C"+C+"GA"+ga+"GB"+gb+"GC"+gc+"GD"+gd+"GE"+ge}}" size="150"></qrcode>
+      </div>
+
+    </fieldset>
+
+</form>

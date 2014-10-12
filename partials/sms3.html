@@ -1,0 +1,25 @@
+<form>
+
+    <fieldset>
+    <legend><span class="label round" >CD</span> </legend>
+
+    <input type="text" pattern="\d*" maxlength="3" name="cd" id="cd" ng-model="cd">
+  </fieldset>
+
+<fieldset class="sample-show-hide" ng-show="cd">
+    <legend>نص الرسالة</legend>
+
+    <div class="small-12 large-6 large-push-6 columns">
+        <label>انسخ هذا النص وأرسله في رسالة نصية
+          <input type="text" value={{"C"+C+"CD"+cd}} readonly>
+        </label>
+    </div>
+
+    <div class="small-12 large-6 large-pull-6 columns">
+      <label>أو إمسح هذه الصورة بهاتفك الجوال</label>
+      <qrcode data='{{"C"+C+"CD"+cd}}' size="150"></qrcode>
+    </div>
+
+  </fieldset>
+
+</form>

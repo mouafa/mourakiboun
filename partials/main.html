@@ -1,0 +1,120 @@
+<!--nav class="top-bar row">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Gulp & Angular</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="active"><a ng-href="#">Home</a></li>
+      <li><a ng-href="#">About</a></li>
+      <li><a ng-href="#">Contact</a></li>
+    </ul>
+  </section>
+</nav-->
+
+<!-- end navihgation -->
+
+<div class="row">
+  <div class="large-12 large-text-center columns">
+    <div class="panel">
+      <h1>مرحبا بيك</h1>
+      <img src="images/logo.png" alt="logo"><br>
+      <h2>مراقبون</h2>
+      <p>عينين التوانسة الكل</p>
+      <!--p><a class="button radius" ng-href="#">Splendid!</a></p-->
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="large-3 large-centered columns">
+<fieldset>
+<legend>المعرف الشخصي </legend>
+      <div class="row collapse">
+
+        <label>المعرف الشخصي</label>
+        <div class="small-2 columns">
+          <span class="prefix">C</span>
+        </div>
+        <div class="small-10 columns">
+          <input type="text" placeholder="123456" ng-model="C" ng-blur='store()'/>
+        </div>
+
+      </div>
+    </fieldset>
+    </div>
+
+
+</div>
+
+
+<div class="row">
+
+  <dl class="accordion" data-accordion ng-model="accordion">
+
+  <dd class="accordion-navigation">
+    <a ng-click='accordion=1'>   الإرسالية القصيرة الأولى:   <span class="round success label">06:15</span></a>
+    <div id="panel" class="content" ng-class='{"active":accordion==1}' ng-init="accordion=0">
+      <div class="slide-animate" ng-include="src='partials/sms1.html'"></div>
+    </div>
+  </dd>
+
+  <dd class="accordion-navigation">
+  <a ng-click='accordion=2'>   الإرسالية القصيرة الثانية:   <span class="round success label">07:15</span></a>
+    <div class="content" ng-class='{"active":accordion==2}'>
+      <div class="slide-animate" ng-include="src='partials/sms2.html'"></div>
+    </div>
+  </dd>
+
+  <dd class="accordion-navigation">
+  <a ng-click='accordion=3'>   الإرسالية القصيرة الثالثة:   <span class="round success label">11:00</span></a>
+    <div  class="content" ng-class='{"active":accordion==3}'>
+      <div class="slide-animate" ng-include="src='partials/sms3.html'"></div>
+    </div>
+  </dd>
+
+  <dd class="accordion-navigation">
+  <a ng-click='accordion=4'>   الإرسالية القصيرة الرابعة:   <span class="round success label">15:00</span> </a>
+    <div  class="content" ng-class='{"active":accordion==4}'>
+      <div class="slide-animate" ng-include="src='partials/sms4.html'"></div>
+    </div>
+  </dd>
+
+  <dd class="accordion-navigation">
+  <a ng-click='accordion=5'>   الإرسالية القصيرة الخامسة:   <span class="round success label">19:15</span> </a>
+    <div  class="content" ng-class='{"active":accordion==5}'>
+    <div class="slide-animate" ng-include="src='partials/sms5.html'"></div>
+    </div>
+  </dd>
+
+  <dd class="accordion-navigation">
+  <a ng-click='accordion=6'>   الإرسالية القصيرة السادسة:   <span class="round success label">بعد الفرز</span> </a>
+    <div  class="content" ng-class='{"active":accordion==6}'>
+      <div class="slide-animate" ng-include="src='partials/sms6.html'"></div>
+    </div>
+  </dd>
+
+  <dd class="accordion-navigation">
+  <a ng-click='accordion=7'>   الإرسالية القصيرة السابعة:   <span class="round success label">بعد الفرز</span> </a>
+    <div  class="content" ng-class='{"active":accordion==7}'>
+      <div class="slide-animate" ng-include="src='partials/sms7.html'"></div>
+    </div>
+  </dd>
+
+
+</dl>
+
+
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
+    <hr>
+    <p>هذه الأداة غير رسمية، ومازالت قيد التطوير، من فضلك إن كانت لك ملاحظة، مشكلة، أو إقتراح ، رجاءً  راسلنا على mouafa[@]live.fr</p>
+  </div>
+</div>

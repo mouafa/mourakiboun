@@ -1,0 +1,98 @@
+<form>
+
+  <fieldset>
+      <legend><span class="label round" >FA</span> </legend>
+      <input type="radio" name="fa" value="1" id="fa1" ng-model="fa"><label for="fa1">نعم</label>
+      <input type="radio" name="fa" value="2" id="fa2" ng-model="fa"><label for="fa2">لا</label>
+  </fieldset>
+
+  <fieldset>
+      <legend><span class="label round" >FB</span> </legend>
+      <input type="radio" name="fb" value="1" id="fb1" ng-model="fb"><label for="fb1">نعم، تم إحترام الإجراءات</label>
+      <input type="radio" name="fb" value="2" id="fb2" ng-model="fb"><label for="fb2">نعم، بصفة عامة، مع بعض التجاوزات البسيطة</label>
+      <input type="radio" name="fb" value="3" id="fb3" ng-model="fb"><label for="fb3">لا، شهدت العملية مخالفات خطيرة</label>
+  </fieldset>
+
+  <fieldset>
+      <legend><span class="label round" >FC</span> </legend>
+      <input type="radio" name="fc1" value="1" id="fc1" ng-model="fc1"><label for="fc1">لا أحد</label>
+      <input type="radio" name="fc2" value="2" id="fc2" ng-model="fc2"><label for="fc2">النهضة</label>
+      <input type="radio" name="fc3" value="3" id="fc3" ng-model="fc3"><label for="fc3">نداء تونس</label>
+      <input type="radio" name="fc4" value="4" id="fc4" ng-model="fc4"><label for="fc4">الجبهة الشعبية</label>
+      <input type="radio" name="fc5" value="5" id="fc5" ng-model="fc5"><label for="fc5">آخرون</label>
+
+  </fieldset>
+
+  <fieldset>
+      <legend><span class="label round" >FG</span> </legend>
+      <input type="radio" name="fg" value="1" id="fg1" ng-model="fg"><label for="fg1">نعم</label>
+      <input type="radio" name="fg" value="2" id="fg2" ng-model="fg"><label for="fg2">لا</label>
+  </fieldset>
+
+
+  <fieldset>
+      <legend><span class="label round" >FH</span> </legend>
+      <input type="radio" name="fh" value="1" id="fh1" ng-model="fh"><label for="fh1">نعم</label>
+      <input type="radio" name="fh" value="2" id="fh2" ng-model="fh"><label for="fh2">لا</label>
+  </fieldset>
+
+  <fieldset>
+      <legend><span class="label round" >FK</span> </legend>
+      <input type="text" pattern="\d*" maxlength="2" name="fk" id="fk" ng-model="fk">
+  </fieldset>
+
+  <fieldset>
+      <legend><span class="label round" >FM</span> </legend>
+      <input type="text" pattern="\d*" maxlength="3" name="fm" id="fm" ng-model="fm">
+  </fieldset>
+
+<fieldset>
+    <legend><span class="label round" >FN</span> </legend>
+    <input type="text" pattern="\d*" maxlength="3" name="fn" id="fn" ng-model="fn">
+</fieldset>
+
+<fieldset>
+    <legend><span class="label round" >FP</span> </legend>
+    <input type="text" pattern="\d*" maxlength="3" name="fp" id="fp" ng-model="fp">
+</fieldset>
+
+<fieldset>
+    <legend><span class="label round" >FQ</span> </legend>
+    <input type="text" pattern="\d*" maxlength="3" name="fq" id="fq" ng-model="fq">
+</fieldset>
+
+<fieldset>
+    <legend><span class="label round" >FR</span> </legend>
+    <input type="text" pattern="\d*" maxlength="3" name="fr" id="fr" ng-model="fr">
+</fieldset>
+
+<fieldset>
+    <legend><span class="label round" >FS</span> </legend>
+    <input type="text" pattern="\d*" maxlength="3" name="fs" id="fs" ng-model="fs">
+</fieldset>
+
+<fieldset>
+    <legend><span class="label round" >FT</span> </legend>
+    <input type="text" pattern="\d*" maxlength="3" name="ft" id="ft" ng-model="ft">
+</fieldset>
+
+
+
+<fieldset class="sample-show-hide" ng-show="ft">
+    <legend>نص الرسالة</legend>
+
+
+    <div class="small-12 large-6 large-push-6 columns">
+        <label>انسخ هذا النص وأرسله في رسالة نصية
+          <input type="text" value={{"C"+C+"FA"+fa+"FB"+fb+"FC"+fc1+fc2+fc3+fc4+fc5+"FG"+fg+"FH"+fh+"FK"+fk+"FM"+fm+"FN"+fn+"FP"+fp+"FQ"+fq+"FR"+fr+"FS"+fs+"FT"+ft}} readonly>
+        </label>
+    </div>
+
+    <div class="small-12 large-6 large-pull-6 columns">
+      <label>أو إمسح هذه الصورة بهاتفك الجوال</label>
+      <qrcode data='{{"C"+C+"FA"+fa+"FB"+fb+"FC"+fc1+fc2+fc3+fc4+fc5+"FG"+fg+"FH"+fh+"FK"+fk+"FM"+fm+"FN"+fn+"FP"+fp+"FQ"+fq+"FR"+fr+"FS"+fs+"FT"+ft}}' size="150"></qrcode>
+    </div>
+
+  </fieldset>
+
+</form>
